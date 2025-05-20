@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Happy Birthday Meisya Rike!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="dora-music" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa064e.mp3" loop></audio>
+  <div class="container">
+    <section class="birthday-section" id="home-section">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Dora_the_Explorer_character.png" class="dora-main" alt="Dora the Explorer">
+      <h1>¡Happy Birthday Meisya Rike!</h1>
+      <h2>Join Dora on a Birthday Adventure!</h2>
+      <button id="start-btn" class="adventure-btn">Start Adventure!</button>
+      <button id="music-toggle" class="music-btn" title="Toggle Music">🔊</button>
+    </section>
+    <section class="game-section" id="game-section" style="display:none;">
+      <h2>Where’s the Map?</h2>
+      <p>Can you help Dora find the Map? Choose the right place!</p>
+      <div class="choices">
+        <button class="choice-btn" data-correct="false">1. Backpack</button>
+        <button class="choice-btn" data-correct="true">2. Inside the Tree</button>
+        <button class="choice-btn" data-correct="false">3. Under the Bridge</button>
+      </div>
+      <div id="result-popup" class="popup">
+        <img src="image1.jpg" alt="Birthday Celebration" class="popup-img">
+        <h3>Yeayy! You found the Map!</h3>
+        <audio id="yeayy-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b3c33f2.mp3"></audio>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+    </section>
+  </div>
+  <canvas id="confetti-canvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

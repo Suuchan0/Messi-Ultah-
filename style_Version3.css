@@ -1,0 +1,163 @@
+body {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  text-align: center;
+  position: relative;
+  background: rgba(255,255,255,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(255, 120, 20, 0.15);
+  margin-top: 5vh;
+}
+.dora-main {
+  width: 160px;
+  margin-bottom: 16px;
+  filter: drop-shadow(2px 6px 16px #fcb69f);
+  animation: pop 1.2s infinite alternate;
+}
+@keyframes pop {
+  to { transform: scale(1.06) rotate(-2deg);}
+}
+h1 {
+  color: #e66024;
+  font-size: 2.5em;
+  text-shadow: 2px 4px 6px #fff8;
+  margin-bottom: 0.25em;
+}
+h2, h3 {
+  color: #4e148c;
+  margin-bottom: 1em;
+}
+.adventure-btn {
+  background: linear-gradient(90deg, #ffd700 0%, #ff80ab 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 2px 6px 12px #fcb69f88;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s, transform 0.2s;
+}
+.adventure-btn:hover {
+  background: linear-gradient(90deg, #ff80ab 0%, #ffd700 100%);
+  transform: scale(1.05);
+}
+.music-btn {
+  margin-top: 16px;
+  margin-left: 12px;
+  background: #fff8;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #ff80ab33;
+  transition: background 0.2s;
+}
+.music-btn.active {
+  background: #ffd700;
+}
+.game-section {
+  margin-top: 32px;
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 32px 0;
+}
+.choice-btn {
+  background: linear-gradient(145deg, #80d6ff 0%, #ffd700 100%);
+  color: #5d174b;
+  font-size: 1.1em;
+  padding: 16px 18px;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px #80d6ff33;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.choice-btn:hover {
+  background: linear-gradient(145deg, #ffd700 0%, #80d6ff 100%);
+  transform: scale(1.06);
+}
+.choice-btn.wrong {
+  background: #ffb3b3 !important;
+  color: #b30000 !important;
+  animation: shake 0.2s 2;
+}
+@keyframes shake {
+  0% { transform: translateX(0);}
+  25% { transform: translateX(-6px);}
+  50% { transform: translateX(6px);}
+  75% { transform: translateX(-6px);}
+  100% { transform: translateX(0);}
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: #fffefc;
+  padding: 32px 24px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #e6602433;
+  z-index: 1001;
+  text-align: center;
+  animation: popup 0.5s;
+}
+@keyframes popup {
+  from { opacity: 0; transform: translate(-50%,-60%) scale(0.7);}
+  to { opacity: 1; transform: translate(-50%,-50%) scale(1);}
+}
+.popup-img {
+  width: 180px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #80d6ff44;
+}
+#play-again-btn {
+  margin-top: 18px;
+  padding: 10px 26px;
+  background: linear-gradient(90deg, #ff80ab 0%, #80d6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #fcb69f33;
+}
+#confetti-canvas {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 16px 2px;
+    margin-top: 2vw;
+  }
+  .choices {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .popup-img {
+    width: 90vw;
+    max-width: 200px;
+  }
+}
